@@ -1,18 +1,25 @@
 let $PATH.=";C:\\Program Files (x86)\\Git\\bin"
 
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
-Plug 'altercation/vim-colors-solarized'
+
+Plug 'chriskempson/base16-vim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 Plug 'scrooloose/nerdtree'
+
+Plug 'tpope/vim-fugitive'
+
 Plug 'kien/rainbow_parentheses.vim'
-"Plug 'airblade/vim-gitgutter'
-"Plug 'tpope/vim-fugitive'
+
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-highlight'
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+
 call plug#end()
 
 set expandtab
@@ -22,16 +29,16 @@ set tabstop=4
 set visualbell
 set hlsearch
 
-colorscheme solarized
-
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='base16'
+
+colorscheme base16-tomorrow-night
 
 if !exists("autocommands_loaded")
-  let autocommands_loaded = 1
+    let autocommands_loaded = 1
 
-  autocmd VimEnter *       RainbowParenthesesToggle
-  autocmd Syntax   clojure RainbowParenthesesLoadRound
-  autocmd Syntax   clojure RainbowParenthesesLoadSquare
-  autocmd Syntax   clojure RainbowParenthesesLoadBraces
+    autocmd VimEnter *       RainbowParenthesesToggle
+    autocmd Syntax   clojure RainbowParenthesesLoadRound
+    autocmd Syntax   clojure RainbowParenthesesLoadSquare
+    autocmd Syntax   clojure RainbowParenthesesLoadBraces
 endif
