@@ -20,6 +20,8 @@ Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
+Plug 'schmich/vim-guifont'
+
 call plug#end()
 
 set expandtab
