@@ -39,8 +39,8 @@ colorscheme base16-tomorrow-night
 if !exists("autocommands_loaded")
     let autocommands_loaded = 1
 
-    autocmd VimEnter clojure RainbowParenthesesToggle
-    autocmd Syntax   clojure RainbowParenthesesLoadRound
-    autocmd Syntax   clojure RainbowParenthesesLoadSquare
-    autocmd Syntax   clojure RainbowParenthesesLoadBraces
+    autocmd Syntax clojure RainbowParenthesesToggle
+    autocmd Syntax clojure RainbowParenthesesLoadRound
+    autocmd Syntax clojure RainbowParenthesesLoadSquare
+    autocmd Syntax clojure RainbowParenthesesLoadBraces
 endif
