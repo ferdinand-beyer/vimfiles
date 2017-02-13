@@ -1,4 +1,4 @@
-let $PATH.=";C:\\Program Files (x86)\\Git\\bin"
+let $PATH.=";C:\\Apps\\Git\\bin;C:\\Program Files (x86)\\Git\\bin"
 
 call plug#begin()
 
