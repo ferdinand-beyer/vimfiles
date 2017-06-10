@@ -1,5 +1,10 @@
 let $PATH.=";C:\\Apps\\Git\\bin;C:\\Program Files (x86)\\Git\\bin"
 
+" Use <Space> for the <[Local]Leader>
+nnoremap <Space> <Nop>
+let mapleader = "\<Space>"
+let maplocalleader = mapleader
+
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
@@ -25,18 +30,19 @@ Plug 'schmich/vim-guifont'
 call plug#end()
 
 set expandtab
+set hlsearch
 set number
 set shiftwidth=4
+set showcmd
 set tabstop=4
 set visualbell
-set hlsearch
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
+let g:airline_theme = 'base16'
 
 colorscheme base16-tomorrow-night
 
-if !exists("autocommands_loaded")
+if !exists('autocommands_loaded')
     let autocommands_loaded = 1
 
     autocmd FileType clojure RainbowParenthesesActivate
