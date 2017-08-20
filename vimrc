@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'tpope/vim-fugitive'
 
@@ -24,6 +25,8 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+
+Plug 'pboettch/vim-cmake-syntax'
 
 Plug 'schmich/vim-guifont'
 
@@ -40,6 +43,11 @@ set visualbell
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
+silent nnoremap <C-N> :NERDTreeTabsToggle<CR>:NERDTreeSteppedClose<CR>
+
+" See: https://chriskempson.github.io/base16/
 colorscheme base16-tomorrow-night
 
 if !exists('autocommands_loaded')
