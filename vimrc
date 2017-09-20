@@ -45,7 +45,7 @@ let g:airline_theme = 'base16'
 
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
-silent nnoremap <C-N> :NERDTreeTabsToggle<CR>:NERDTreeSteppedClose<CR>
+silent nnoremap <C-N> :NERDTreeTabsToggle<CR>
 
 " See: https://chriskempson.github.io/base16/
 colorscheme base16-tomorrow-night
