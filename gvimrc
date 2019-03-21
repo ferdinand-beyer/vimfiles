@@ -5,6 +5,14 @@ set guioptions-=m
 set columns=120
 set lines=32
 
+" Base 16:
+" https://chriskempson.github.io/base16/
+" http://chriskempson.com/projects/base16/
+colorscheme base16-github
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16'
+
 if has("osx")
   " Install from:
   " https://github.com/abertsch/Menlo-for-Powerline

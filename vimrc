@@ -30,8 +30,14 @@ Plug 'pboettch/vim-cmake-syntax'
 
 Plug 'schmich/vim-guifont'
 
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
+set cursorline
 set expandtab
 set hlsearch
 set number
@@ -40,15 +46,15 @@ set showcmd
 set tabstop=4
 set visualbell
 
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16'
-
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
 silent nnoremap <C-N> :NERDTreeTabsToggle<CR>
 
-" See: https://chriskempson.github.io/base16/
-colorscheme base16-tomorrow-night
+" Allow .js extension for React
+let g:jsx_ext_required = 0
+
+" Default to bash
+let g:is_bash = 1
 
 if !exists('autocommands_loaded')
     let autocommands_loaded = 1
